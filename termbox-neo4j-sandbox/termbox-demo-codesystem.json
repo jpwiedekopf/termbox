@@ -1,0 +1,191 @@
+{
+  "resourceType": "CodeSystem",
+  "title": "TermBox Demo CodeSystem",
+  "url": "http://wiedekopf.net/termbox/CodeSystem/demo",
+  "meta": {
+	  "version": 3
+  },
+  "identifier": [
+    {
+      "system": "http://wiedekopf.net/termbox/Identifier",
+      "value": "1"
+    }
+  ],
+  "version": "1.0.0",
+  "status": "draft",
+  "contact": [
+    {
+      "telecom": [
+        {
+          "system": "email",
+          "value": "j.wiedekopf@uni-luebeck.de"
+        }
+      ],
+      "name": "Joshua Wiedekopf"
+    },
+    {
+      "telecom": [
+        {
+          "system": "url",
+          "value": "https://www.itcr.uni-luebeck.de/it-center-for-clinical-research.html"
+        }
+      ],
+      "name": "IT Center for Clinical Research"
+    }
+  ],
+  "description": "A demo CodeSystem for demonstrating the TermBox graph-based terminology server concept; this resource has many attributes set.",
+  "compositional": false,
+  "content": "complete",
+  "concept": [
+    {
+      "code": "A",
+      "display": "Concept A",
+      "definition": "asdf",
+      "property": [
+        {
+          "code": "color",
+          "valueString": "green"
+        }
+      ]
+    },
+    {
+      "code": "B",
+      "display": "Concept B",
+      "definition": "zxcv",
+      "property": [
+        {
+          "code": "child",
+          "valueCode": "B.1"
+        }
+      ]
+    },
+    {
+      "code": "C",
+      "display": "Concept C",
+      "definition": "qwer",
+      "property": [
+        {
+          "code": "related-to",
+          "valueCode": "C-R"
+        }
+      ]
+    },
+    {
+      "code": "D",
+      "display": "Concept D"
+    },
+    {
+      "code": "E",
+      "display": "Concept E"
+    },
+    {
+      "code": "F",
+      "display": "Concept F",
+      "property": [
+        {
+          "code": "color",
+          "valueString": "orange"
+        }
+      ]
+    },
+    {
+      "code": "G",
+      "display": "Concept G",
+      "property": [
+        {
+          "code": "color",
+          "valueString": "hot-pink"
+        }
+      ]
+    },
+    {
+      "code": "A.1",
+      "display": "Concept A.1 below A via parent",
+      "property": [
+        {
+          "code": "parent",
+          "valueCode": "A"
+        }
+      ]
+    },
+    {
+      "code": "A.2",
+      "display": "Concept A.2 below A via parent",
+      "property": [
+        {
+          "code": "parent",
+          "valueCode": "A"
+        }
+      ]
+    },
+    {
+      "code": "B.1",
+      "display": "Concept B.1 below B via child",
+      "property": [
+        {
+          "code": "child",
+          "valueCode": "B.1.1"
+        }
+      ]
+    },
+    {
+      "code": "C-R",
+      "display": "related to C"
+    },
+    {
+      "code": "A.1.1",
+      "display": "Concept A.1.1 below A.1 via parent",
+      "property": [
+        {
+          "code": "parent",
+          "valueCode": "A.1"
+        }
+      ]
+    },
+    {
+      "code": "B.1.1",
+      "display": "Concept B.1.1 below B.1 via child"
+    }
+  ],
+  "text": {
+    "status": "generated",
+    "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><h2>TermBox Demo CodeSystem</h2><tt>http://wiedekopf.net/termbox/CodeSystem/demo</tt><p>A demo CodeSystem for demonstrating the TermBox graph-based terminology server concept; this resource has many attributes set.</p></div>"
+  },
+  "name": "Termbox_demo_codesystem",
+  "valueSet": "http://wiedekopf.net/termbox/CodeSystem/demo?vs",
+  "caseSensitive": false,
+  "versionNeeded": false,
+  "hierarchyMeaning": "is-a",
+  "language": "de-DE",
+  "property": [
+    {
+      "code": "related-to",
+      "type": "code",
+      "uri": "http://wiedekopf.net/termbox/CodeSystem/properties/related-to",
+      "description": "Concepts are related"
+    },
+    {
+      "code": "color",
+      "type": "string",
+      "uri": "http://wiedekopf.net/termbox/CodeSystem/properties/color",
+      "description": "The color of the concept"
+    }
+  ],
+  "experimental": true,
+  "publisher": "Universität zu Lübeck",
+  "copyright": "CC0",
+  "date": "2022-05-04T12:00:00.000Z",
+  "filter": [
+    {
+      "operator": [
+        "is-a",
+        "regex"
+      ],
+      "value": "display",
+      "code": "approx",
+      "description": "Match against the display using a regex"
+    }
+  ],
+  "id": "termbox-demo-code-system",
+  "count": 13
+}
